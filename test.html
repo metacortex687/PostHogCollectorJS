@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostHog Event Tracking</title>
+    <script type="module">
+        import { posthog_collector } from './PostHogCollector.js';
+
+        //В примере нет работы с идентификацие пользователя
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('button1').addEventListener('click', () => {
+                posthog_collector.capture('ssm_section_read ', { section_name: 'РР 1.1' });
+                // posthog_collector.capture('test_button_clicked', { button_name: 'Button 1' }); //и этот код работает
+            });
+            //идеальный вариант это находить кнопку по имени класса class="btn btn-secondary"
+            //читать информацию со страницы и отправлять на posthog
+            //но может быть проблема когда что то поменяют на странице и забудут про posthog, про который и не должны помнить
+
+            // document.getElementById('button2').addEventListener('click', () => {
+            //     posthogPlugin.capture('button_clicked', { button_name: 'Button 2' });
+            // });
+        });
+    </script>
+</head>
+<body>
+    <h1>PostHog Event Tracking Example</h1>
+    <button id="button1">Отметить прочитанным</button>
+   
+    <!-- <button id="button2">Отметить прочитанным</button> -->
+</body>
+</html>
