@@ -39,13 +39,9 @@ class PostHogCollector {
   }
 }
 
-// Создаем и инициализируем переменную posthog
-// Здесь мой API надо свой сюда
-
 
 //const posthogPlugin = new PostHogPlugin('YOUR_PROJECT_API_KEY');
 const posthog_collector = new PostHogCollector('phc_aDprQSPEqgRugAsvqWpuCwOp2zihhQThU6edDQ22b7O');
-
 
 // Экспортируем posthogPlugin и posthog для использования в других модулях
 export { posthog_collector };
