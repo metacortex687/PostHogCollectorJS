@@ -43,5 +43,5 @@ class PostHogCollector {
 //const posthogPlugin = new PostHogPlugin('YOUR_PROJECT_API_KEY');
 const posthog_collector = new PostHogCollector('phc_aDprQSPEqgRugAsvqWpuCwOp2zihhQThU6edDQ22b7O');
 
-// Экспортируем posthogPlugin и posthog для использования в других модулях
+// Экспортируем 
 export { posthog_collector };
