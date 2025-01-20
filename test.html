@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PostHog Event Tracking</title>
     <script type="module">
-        import { posthog_collector } from './PostHogCollector.js';
+        import './PostHogCollector.js';
 
         //В примере нет работы с идентификацие пользователя
 
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('button1').addEventListener('click', () => {
-                posthog_collector.capture('ssm_section_read ', { section_name: 'РР 1.1' });
+                posthog.capture('ssm_section_read ', { section_name: 'РР 1.1' });
                 // posthog_collector.capture('test_button_clicked', { button_name: 'Button 1' }); //и этот код работает
             });
             //идеальный вариант это находить кнопку по имени класса class="btn btn-secondary"
