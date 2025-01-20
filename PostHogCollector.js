@@ -21,8 +21,8 @@ class PostHogCollector {
   }
 
   //иденитификация пользователя
-  identify(distinct_id, properties = {}, properties_once = {}) {
-    posthog.identify(userId, properties, properties_once);
+  identify(user_id, properties = {}) {
+    posthog.identify(user_id, properties);
   }
 
   //выход из системы пользователя
