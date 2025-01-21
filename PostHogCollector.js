@@ -40,4 +40,4 @@ class PostHogCollector {
 //const posthog_collector = new PostHogCollector('YOUR_PROJECT_API_KEY');
 const posthog_collector = new PostHogCollector('phc_aDprQSPEqgRugAsvqWpuCwOp2zihhQThU6edDQ22b7O');
 
-export { posthog_collector };
+export { posthog_collector,  PostHogCollector };
